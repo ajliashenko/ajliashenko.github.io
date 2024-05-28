@@ -1,0 +1,361 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333333; /* Dark text color */
+}
+
+/* Header */
+header {
+    background-color: #173459; /* Primary dark blue color */
+    color: rgb(221, 221, 221);
+    padding: 0.5em 1em;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #173459;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    z-index: 1000;
+}
+
+nav .logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav .company-name {
+    color: rgb(221, 221, 221);
+    font-size: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5em;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: rgb(221, 221, 221);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5a1f; /* Highlight color */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Set the height of the banner */
+    overflow: hidden; /* Ensure any overflow content is hidden */
+    background-color: #173459;
+    text-align: center;
+    color: rgb(221, 221, 221);
+
+
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place the image behind the text */
+    opacity: 100%;
+}
+
+.hero-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the GIF covers the entire banner area */
+    opacity: 80%;
+
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    z-index: 2; /* Place the text above the image */
+    padding: 1em;
+    border-radius: 10px; /* Optional: Add rounded corners to the background */
+    font-family: 'Cinzel', serif;
+    font-size: calc(12px + 2vw); /* Responsive font size */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+/*background: rgba(22, 2, 152, 0.5); /* Optional: Add a semi-transparent background to enhance text readability */
+
+/* Ensures the text scales correctly on smaller devices */
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: calc(10px + 2vw); /* Adjust the base font size for smaller screens */
+    }
+}
+
+.hero-text h1 {
+    margin: 0;
+}
+
+.hero-logo {
+    margin-top: 1em;
+    width: 70px; /* Adjust width and height as needed */
+    height: 70px;
+    background-image: url('logo.svg'); /* Replace with your logo path */
+    background-size: cover;
+    position: relative;
+    transform: translate(-50%, -50%);
+    animation: spin 10s linear infinite; /* Adjust animation duration as needed */
+
+
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Section */
+.section {
+    padding: 2em 2em;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+.section:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Content Container */
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* Headings */
+h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #173459; /* Primary dark blue color */
+}
+
+/* Add background image to the section */
+.services {
+    position: relative; /* Necessary for absolute positioning of the image */
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+/* Style the background image */
+.services-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Set height to cover full height of the section */
+    background-image: url(''); /* Replace 'your-image-url.jpg' with your image path */
+    background-size: cover;
+    opacity: 100%;
+    z-index: -1; /* Place the image behind other content */
+    padding-top: 3em;
+    background-color: #173459
+}
+
+/* Card styles */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 1 1 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-list {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover .card-list {
+    transform: scale(1.2); /* Slightly scale up on hover */
+}
+
+.card-avail {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: .5em;
+    text-align: center;
+    width: fit-content;
+    height: auto;
+    margin: auto; /* Center horizontally */
+    margin-bottom: 1em;
+    position: relative; /* Position it in the center of the viewport */
+}
+
+.card p {
+    text-align: justify;
+    margin-bottom: 0.5em;
+}
+
+/* Services List */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    justify-items: center;
+    align-content: center;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.service-item {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex: 1 1 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.loc-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Set height to cover full height of the section */
+}
+
+/* Style the background image */
+.local-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Set height to cover full height of the section */
+    background-image: url(''); /* Replace 'your-image-url.jpg' with your image path */
+    background-size: cover;
+    opacity: 100%;
+    z-index: -1; /* Place the image behind other content */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    opacity: 100%;
+
+    background-color: #173459
+
+}
+
+/* Style the background image */
+.form-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Set height to cover full height of the section */
+    background-image: url(''); /* Replace 'your-image-url.jpg' with your image path */
+    background-size: cover;
+    opacity: 100%;
+    z-index: -1; /* Place the image behind other content */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    opacity: 100%;
+    background-color: #173459
+}
+
+/* About and Location Content */
+.about-content,
+.location-content,
+.philosophy-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    text-align: center;
+}
+
+.about-text,
+.location-text,
+.philosophy-text {
+    flex: 1 1 40%;
+    max-width: 500px;
+}
+
+/* Images */
+.about-image-wrapper,
+.location-image-wrapper {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+
+}
+
+.about-image,
+.location-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea {
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+}
+
+form button {
+    padding: 1em;
+}
