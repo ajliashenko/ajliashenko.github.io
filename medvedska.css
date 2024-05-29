@@ -342,10 +342,6 @@ h2 {
 }
 
 
-form button {
-    padding: 1em;
-}
-
 section#contact .content iframe {
     position: relative;
     z-index: 1;
