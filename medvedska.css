@@ -297,19 +297,7 @@ h2 {
 
 
 /* Style the background image */
-.form-image {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* Set height to cover full height of the section */
-    background-image: url(''); /* Replace 'your-image-url.jpg' with your image path */
-    background-size: cover;
-    z-index: -1; /* Place the image behind other content */
-    padding-top: 1em;
-    padding-bottom: 1em;
-    background-color: #173459
-}
+
 
 /* About and Location Content */
 .about-content,
@@ -348,21 +336,11 @@ h2 {
 }
 
 /* Contact Form */
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    max-width: 500px;
-    margin: 0 auto;
+
+.form{
+    background-color: #173459;
 }
 
-form input,
-form textarea {
-    padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 100%;
-}
 
 form button {
     padding: 1em;
