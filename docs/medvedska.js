@@ -19,52 +19,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Function to add slide-in class to elements
-    function slideIn(elements) {
-        elements.forEach(function(element) {
+        // Function to add slide-in class to elements
+        function slideIn(element) {
             element.classList.add("slide-in");
-        });
-    }
-
-    // Select elements to animate
-    var slideElements = document.querySelectorAll(".slide-in");
-
-    function checkSlide() {
-        slideElements.forEach(function(element) {
-            if (isElementInViewport(element)) {
-                slideIn([element]);
-            }
-        });
-    }
-
-    // Check if an element is in the viewport
-    function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    // Function to toggle navbar text visibility
-    function toggleNavbarText() {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        const whatTop = whatSection.getBoundingClientRect().top;
-
-        if (heroBottom <= 0 && whatTop > 0) {
-            navbarText.style.display = 'inline';
-        } else {
-            navbarText.style.display = 'none';
         }
-    }
 
-    // Attach event listener for scrolling
-    window.addEventListener("scroll", checkSlide);
-    window.addEventListener("scroll", toggleNavbarText);
+        // Select elements to animate
+        var slideElements = document.querySelectorAll(".slide-element");
 
-    // Initial check
-    checkSlide();
-    toggleNavbarText();
-});
+        function checkSlide() {
+            slideElements.forEach(function(element) {
+                if (isElementInViewport(element) && !element.classList.contains("slide-in")) {
+                    slideIn(element);
+                }
+            });
+        }
+
+        // Check if an element is in the viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            var elementHeight = rect.bottom - rect.top;
+            var elementInView = rect.top >= 0 &&
+                                rect.left >= 0 &&
+                                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                                rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+            var majorityInView = (rect.top + elementHeight / 2) <= (window.innerHeight || document.documentElement.clientHeight);
+            return elementInView && majorityInView;
+        }
+
+        // Attach event listener for scrolling
+        window.addEventListener("scroll", checkSlide);
+
+        // Initial check
+        checkSlide();
+    });
+
+

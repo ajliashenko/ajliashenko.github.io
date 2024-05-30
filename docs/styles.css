@@ -210,6 +210,7 @@ h2 {
     align-items: center;
     align-content: center;
     transition: transform 0.3s ease-in-out;
+
 }
 
 .service-item:hover .card-list {
@@ -333,6 +334,26 @@ h2 {
     padding-top: 20px;
 }
 
+.formz{
+    background-color: #173459;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.servicez{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Set height to cover full height of the section */
+    background-image: url(''); /* Replace 'your-image-url.jpg' with your image path */
+    background-size: cover;
+    opacity: 100%;
+    z-index: -1; /* Place the image behind other content */
+    padding-top: 3em;
+    background-color: white
+}
+
 section#contact .content iframe {
     position: absolute;
     z-index: 1;
@@ -354,19 +375,75 @@ section#contact .content iframe {
     font-family: 'Cinzel', serif;
     font-size: calc(10px + 1vw); /* Responsive font size */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    list-style: none;
 }
 
 .form-logo{
     position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     z-index: 1; /* Place the image behind the text */
-    opacity: 100%;
-    background-size: cover;
-    position: relative;
+    background-size:cover;
     transform: translate(-50%, -50%);
     animation: spin 60s linear infinite; /* Adjust animation duration as needed */
 
+}
+
+/* Add this to your styles.css file */
+.apply-button {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    font-size: 18px; /* Bigger font size */
+    padding: 10px 20px; /* Larger padding */
+    border: none;
+    border-radius: 5px; /* Optional: rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    box-shadow: 1 1 10px rgba(0, 0, 0, 0.1);
+}
+
+.apply-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+
+}
+
+/* Add the slide-in class animation */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.slide-element {
+    opacity: 0; /* Ensure the element is invisible until the animation plays */
+}
+
+/* Add the slide-in class animation */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(+100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-inR {
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
+.slide-elementR {
+    animation: slideInFromRight 1s ease-out forwards;
+    opacity: 0; /* Ensure the element is invisible until the animation plays */
 }

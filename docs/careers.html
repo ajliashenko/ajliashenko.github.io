@@ -81,8 +81,10 @@
                 </div>
             </div> --->
 
-<body>
-    <section id="careers" class="form">
+            <!-- Corrected placement of closing main tag -->
+    </main>
+
+    <section id="careers" class="formz">
         <div class="content">
             <div class="card">
                 <div class="about-content">
@@ -91,37 +93,36 @@
                     </div>
                     <div class="about-text">
                         <div class="who">
-                            <h2>Apply Anyway:</h2>
+                            <h2>Apply Anyway</h2>
                         </div>
-                        <p><b>Please note:</b> You have the option to remove your
+                        <p><b>Please note:</b>
+                            You have the option to remove any of the following from your resume:
                             <ul>
                                 <li>Name</li>
-                                <li>Email</li>
                                 <li>Graduation Date</li>
-                            </ul><br> To prevent any bias.<br>
-                            We only care about the quality of your work.<br>
+                            </ul></p>
+                            <p><br> To help prevent bias while reviewing resumes.<br>
+                            We only value the quality of your work and professionalism.<br>
 
-                            Please ensure your phone number is up to date.<br><br></p>
-                            <form action="/submit-resume" method="post" enctype="multipart/form-data">
-                                <label for="resume">Select a PDF file:</label>
-                                <input type="file" id="resume" name="resume" accept="application/pdf">
-                                <br><br>
-                                <input type="submit" value="Submit"></div>
-                </div>
+
+                            Please ensure your phone number is up to date.<br>
+                            <div><b>No cover letters</b><br></div>
+                            </p>
+                            <button class="apply-button" onclick="window.location.href='mailto:Apply@medvedska.com'">Send a PDF resume here</button>
             </div>
         </div>
-    </div>
     </section>
-            </body>
-
-     </section>
-
-<section>
-    <footer class="foot">
-        <p>&copy; 2024 Medvedska LLC</p>
-    </footer>
+</div>
+</div>
+</div>
+</div>
 </section>
-    <script src="medvedska.js"></script>
 
+<footer class="foot">
+    <p>&copy; 2024 Medvedska LLC</p>
+</footer>
+
+<!-- JavaScript moved to end of body for better performance -->
+<script src="medvedska.js"></script>
 </body>
 </html>
