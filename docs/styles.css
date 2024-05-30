@@ -19,6 +19,8 @@ header {
 }
 
 /* Navigation */
+/* Navigation */
+/* Navigation */
 nav {
     position: fixed;
     top: 0;
@@ -28,7 +30,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
+    padding: 1px 20px;
     z-index: 1000;
 }
 
@@ -63,6 +65,14 @@ nav ul li a {
 nav ul li a:hover {
     color: #ff5a1f; /* Highlight color */
 }
+
+nav ul li a:visited,
+nav ul li a:focus,
+nav ul li a:active {
+    color: rgb(221, 221, 221) !important; /* Ensure it stays white */
+    text-decoration: none !important; /* Remove underline */
+}
+
 
 /* Hero Section */
 .hero {
