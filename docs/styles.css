@@ -301,13 +301,20 @@ h2 {
     text-align: center;
 }
 
+
+
 .about-text,
 .location-text ul,
 .philosophy-text {
     flex: 1 1 40%;
     max-width: 500px;
     list-style: none;
+    text-decoration: none;
+}
 
+.about-text ul{
+    text-decoration: none;
+    list-style: none;
 }
 
 /* Images */
@@ -316,6 +323,7 @@ h2 {
     width: 100%;
     max-width: 250px;
     margin: 0 auto;
+
 
 }
 
@@ -326,6 +334,15 @@ h2 {
     display: block;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.careerwrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
 }
 
 /* Contact Form */
@@ -375,7 +392,9 @@ section#contact .content iframe {
     font-family: 'Cinzel', serif;
     font-size: calc(10px + 1vw); /* Responsive font size */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    list-style: none;
+list-style: none;
+    text-decoration: none;
+
 }
 
 .form-logo{
@@ -386,6 +405,9 @@ section#contact .content iframe {
     background-size:cover;
     transform: translate(-50%, -50%);
     animation: spin 60s linear infinite; /* Adjust animation duration as needed */
+    justify-self: center;
+    align-self: center;
+    justify-items: center;
 
 }
 
