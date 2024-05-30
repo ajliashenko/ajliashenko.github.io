@@ -19,39 +19,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-        // Function to add slide-in class to elements
-        function slideIn(element) {
-            element.classList.add("slide-in");
-        }
+    // Function to add slide-in class to elements
+    function slideIn(element) {
+        element.classList.add("slide-in");
+    }
 
-        // Select elements to animate
-        var slideElements = document.querySelectorAll(".slide-element");
+    // Select elements to animate
+    var slideElements = document.querySelectorAll(".slide-element");
 
-        function checkSlide() {
-            slideElements.forEach(function(element) {
-                if (isElementInViewport(element) && !element.classList.contains("slide-in")) {
-                    slideIn(element);
-                }
-            });
-        }
+    function checkSlide() {
+        slideElements.forEach(function(element) {
+            // Check if the element is within the viewport and has the slide-in class
+            if (isElementInViewport(element) && element.classList.contains("slide-in")) {
+                // Element is in viewport and has the slide-in class
+                // No need to add the class again
+            } else {
+                // Element is not in viewport or doesn't have the slide-in class
+                // Remove the slide-in class if it exists
+                element.classList.remove("slide-in");
+            }
+        });
+    }
 
-        // Check if an element is in the viewport
-        function isElementInViewport(el) {
-            var rect = el.getBoundingClientRect();
-            var elementHeight = rect.bottom - rect.top;
-            var elementInView = rect.top >= 0 &&
-                                rect.left >= 0 &&
-                                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                                rect.right <= (window.innerWidth || document.documentElement.clientWidth);
-            var majorityInView = (rect.top + elementHeight / 2) <= (window.innerHeight || document.documentElement.clientHeight);
-            return elementInView && majorityInView;
-        }
+    // Check if an element is in the viewport
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
-        // Attach event listener for scrolling
-        window.addEventListener("scroll", checkSlide);
+    // Attach event listener for scrolling
+    window.addEventListener("scroll", checkSlide);
 
-        // Initial check
-        checkSlide();
-    });
+    // Initial check
+    checkSlide();
+});
 
+document.getElementById('applyButton').addEventListener('click', function() {
+    const subject = "Put Acronym Here";
+    const body = "Put the department acronym you are applying to in the subject line for automatic sorting \n\n OP   -   Operations \n SW   -   Software Development \n LE   -   Legal \n FI   -   Finance \n HR   -   Human Resources \n GD   -   Graphic Design \n CS   -   CyberSecurity \n\n\n Thank you. ";
+    const mailtoLink = `mailto:Apply@medvedska.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+    window.location.href = mailtoLink;
+});
