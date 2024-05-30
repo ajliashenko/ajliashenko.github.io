@@ -3,13 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroSection = document.getElementById('hero');
     const whatSection = document.getElementById('what');
 
-    // Smooth scrolling for navigation links
+    // Smooth scrolling for internal navigation links
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            // Check if the link is an internal link
+            if (this.getAttribute('href').startsWith('#')) {
+                // Prevent default behavior for internal links
+                e.preventDefault();
+                // Scroll smoothly to the target anchor
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            // For external links, allow default behavior (navigation to external page)
         });
     });
 
