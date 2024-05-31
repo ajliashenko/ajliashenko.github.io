@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medvedska LLC</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://medvedska.com/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -23,10 +23,11 @@
     <!-- End Google Tag Manager (noscript) -->
     <header>
         <nav>
-            <img src="logo.svg" alt="Medvedska LLC Logo" class="logo">
-
+            <div>
+            <img src="https://medvedska.com/logo.svg" alt="Medvedska LLC Logo" class="logo">
+            </div>
             <ul>
-                <li><a href="index.html">Back</a></li>
+                <li><a href="https://medvedska.com/index.html">Back</a></li>
             </ul>
         </nav>
     </header>
@@ -89,7 +90,7 @@
             <div class="card">
                 <div class="careerwrap">
                     <div class="about-image-wrapper">
-                        <div> <img src="logo.svg" alt="Medvedska LLC Logo" class="form-logo"></div>
+                        <div> <img src="https://medvedska.com/logo.svg" alt="Medvedska LLC Logo" class="form-logo"></div>
                     </div>
                     <div class="about-text">
                         <div class="who">
@@ -129,6 +130,30 @@
 </footer>
 
 <!-- JavaScript moved to end of body for better performance -->
-<script src="medvedska.js"></script>
+<script src="https://medvedska.com/medvedska.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('styles.json')
+            .then(response => response.json())
+            .then(data => {
+                applyStyles(data.styles);
+                applyAnimations(data.animations);
+            });
+
+        function applyStyles(styles) {
+            Object.keys(styles).forEach(element => {
+                const elements = document.querySelectorAll(element);
+                elements.forEach(el => {
+                    Object.assign(el.style, styles[element]);
+                });
+            });
+        }
+
+        function applyAnimations(animations) {
+            // Apply animations from JSON data
+            // Example implementation would go here
+        }
+    });
+    </script>
 </body>
 </html>

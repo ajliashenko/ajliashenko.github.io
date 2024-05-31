@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medvedska LLC</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://medvedska.com/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -23,22 +23,23 @@
     <!-- End Google Tag Manager (noscript) -->
     <header>
         <nav>
-            <img src="logo.svg" alt="Medvedska LLC Logo" class="logo">
-
+            <div class= "logo">
+            <img src="https://medvedska.com/logo.svg" alt="Medvedska LLC Logo" class="logo">
+        </div>
             <ul>
                 <li><a href="#what">What</a></li>
                 <li><a href="#who">Who</a></li>
                 <li><a href="#where">Where</a></li>
                 <li><a href="#why">Why</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="careers.html">Careers</a></li>
+                <li><a href="https://medvedska.com/careers.html">Careers</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="hero" class="hero">
             <div class="hero-section">
-                <img src="" alt="Hero img" class="hero-gif">
+                <img src="https://medvedska.com/hero-image.png" alt="Hero img" class="hero-gif">
             </div>
             <div class="hero-text">
                 <h1>MEDVEDSKA LLC<br></h1>Operations Consulting
@@ -103,7 +104,7 @@
                 <div class="card">
                     <div class="about-content">
                         <div class="about-image-wrapper">
-                            <img src="natasha.jpeg" alt="Natasha Sanders" class="about-image ">
+                            <img src="https://medvedska.com/natasha.jpeg" alt="Natasha Sanders" class="about-image ">
                         </div>
                         <div class="about-text">
                             <div class="who">
@@ -134,7 +135,7 @@
                             </ul></b>
                         </div>
                         <div class="location-image-wrapper">
-                            <img src="richmond.webp" alt="Virginia" class="location-image">
+                            <img src="https://medvedska.com/richmond.webp" alt="Virginia" class="location-image">
                         </div>
                     </div>
                 </div>
@@ -151,7 +152,7 @@
                     <p>Things can be better for you, for your employees, for your customers.</p>
                     <p>Suffering is no longer required, but merely a bad habit. Life has the potential to be easy. Let us help.</p>
 
-                    <div> <img src="logo.svg" alt="Medvedska LLC Logo" class="hero-logo"></div>
+                    <div> <img src="https://medvedska.com/logo.svg" alt="Medvedska LLC Logo" class="hero-logo"></div>
                 </div>
             </div>
         </section>
@@ -165,6 +166,30 @@
     <footer>
         <p>&copy; 2024 Medvedska LLC</p>
     </footer>
-    <script src="medvedska.js"></script>
+    <script src="https://medvedska.com/medvedska.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('styles.json')
+                .then(response => response.json())
+                .then(data => {
+                    applyStyles(data.styles);
+                    applyAnimations(data.animations);
+                });
+
+            function applyStyles(styles) {
+                Object.keys(styles).forEach(element => {
+                    const elements = document.querySelectorAll(element);
+                    elements.forEach(el => {
+                        Object.assign(el.style, styles[element]);
+                    });
+                });
+            }
+
+            function applyAnimations(animations) {
+                // Apply animations from JSON data
+                // Example implementation would go here
+            }
+        });
+        </script>
 </body>
 </html>
