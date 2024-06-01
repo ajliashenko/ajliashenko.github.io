@@ -30,13 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function checkSlide() {
         slideElements.forEach(function(element) {
             // Check if the element is within the viewport and has the slide-in class
-            if (isElementInViewport(element) && element.classList.contains("slide-in")) {
-                // Element is in viewport and has the slide-in class
-                // No need to add the class again
-            } else {
-                // Element is not in viewport or doesn't have the slide-in class
-                // Remove the slide-in class if it exists
-                element.classList.remove("slide-in");
+            if (isElementInViewport(element) && !element.classList.contains("slide-in")) {
+                slideIn(element);
             }
         });
     }
