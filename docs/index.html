@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5NRXVXKB');</script>
+    <!-- End Google Tag Manager -->
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -17,8 +23,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRHH2Z4H"
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NRXVXKB"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header>
@@ -142,15 +148,12 @@
         </section>
         <section id="why" class="philosophy section">
             <div class="content">
-
                 <div class="card">
-
                     <h2>Why We Do What We Do</h2>
                     <p>Taking pride in suffering through labor is healthy when suffering is unavoidable and necessary.</p>
                     <p>Pride in suffering while avoidable, is not healthy.</p>
                     <p>Things can be better for you, for your employees, for your customers.</p>
                     <p>Life has the potential to be easy. Let us help.</p>
-
                     <div> <img src="https://medvedska.com/logo.svg" alt="Medvedska LLC Logo" class="hero-logo"></div>
                 </div>
             </div>
@@ -161,34 +164,24 @@
                 <iframe src="https://forms.gle/LZSDzAGhFCrL3FD46" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0" style="z-index: 1; position: relative;">Loading...</iframe>
             </div>
         </section>
+
+        <section>
+        <footer>
+            <p>&copy; 2024 Medvedska LLC</p>
+        </footer>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Medvedska LLC</p>
-    </footer>
-    <script src="https://medvedska.com/medvedska.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('styles.json')
-                .then(response => response.json())
-                .then(data => {
-                    applyStyles(data.styles);
-                    applyAnimations(data.animations);
-                });
+        <div id="cookie-banner" class="cookie-banner">
+            <div class="cookie-message">
+                We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our cookie policy.
+            </div>
+            <div class="cookie-buttons">
+                <button class="accept-cookies" onclick="acceptCookies()">Accept</button>
+                <button class="decline-cookies" onclick="declineCookies()">Decline</button>
+            </div>
+        </div>
 
-            function applyStyles(styles) {
-                Object.keys(styles).forEach(element => {
-                    const elements = document.querySelectorAll(element);
-                    elements.forEach(el => {
-                        Object.assign(el.style, styles[element]);
-                    });
-                });
-            }
-
-            function applyAnimations(animations) {
-                // Apply animations from JSON data
-                // Example implementation would go here
-            }
-        });
+        <script src="cookie-banner.js"></script>
         </script>
-</body>
-</html>
+        </body>
+        </html>

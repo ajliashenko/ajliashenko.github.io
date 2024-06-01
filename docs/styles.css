@@ -469,3 +469,34 @@ list-style: none;
     animation: slideInFromRight 1s ease-out forwards;
     opacity: 0; /* Ensure the element is invisible until the animation plays */
 }
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 1em;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cookie-message {
+    flex: 1;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1em;
+}
+
+.cookie-buttons button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}

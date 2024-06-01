@@ -1,572 +1,208 @@
 {
-    "html": {
-      "doctype": "html",
-      "language": "en",
-      "head": {
-        "meta": [
-          { "charset": "UTF-8" },
-          { "name": "viewport", "content": "width=device-width, initial-scale=1.0" }
-        ],
-        "title": "Medvedska LLC",
-        "links": [
-          { "rel": "stylesheet", "href": "styles.css" },
-          { "rel": "stylesheet", "href": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" }
-        ],
-        "scripts": [
-          "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-KRHH2Z4H');"
-        ]
-      },
-      "body": {
-        "header": {
-          "nav": {
-            "img": { "src": "logo.svg", "alt": "Medvedska LLC Logo", "class": "logo" },
-            "ul": [
-              { "li": { "a": { "href": "#what", "text": "What" } } },
-              { "li": { "a": { "href": "#who", "text": "Who" } } },
-              { "li": { "a": { "href": "#where", "text": "Where" } } },
-              { "li": { "a": { "href": "#why", "text": "Why" } } },
-              { "li": { "a": { "href": "#contact", "text": "Contact" } } },
-              { "li": { "a": { "href": "careers.html", "text": "Careers" } } }
-            ]
-          }
+  "html": {
+    "doctype": "html",
+    "language": "en",
+    "head": {
+      "meta": [
+        { "charset": "UTF-8" },
+        { "name": "viewport", "content": "width=device-width, initial-scale=1.0" }
+      ],
+      "title": "Medvedska LLC",
+      "links": [
+        { "rel": "stylesheet", "href": "styles.css" },
+        { "rel": "stylesheet", "href": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" }
+      ],
+      "scripts": [
+        {
+          "type": "text/javascript",
+          "content": "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KRHH2Z4H');"
         },
-        "main": {
-          "sections": [
-            {
-              "id": "hero",
-              "class": "hero",
-              "div": [
-                { "class": "hero-section", "img": { "src": "", "alt": "Hero img", "class": "hero-gif" } },
-                { "class": "hero-text", "h1": "MEDVEDSKA LLC<br>Operations Consulting" }
-              ]
-            },
-            {
-              "id": "what",
-              "class": "services section",
+        { "src": "cookie-banner.js" }
+      ]
+    },
+    "body": {
+      "header": {
+        "nav": {
+          "img": { "src": "logo.svg", "alt": "Medvedska LLC Logo", "class": "logo" },
+          "ul": [
+            { "li": { "a": { "href": "#what", "text": "What" } } },
+            { "li": { "a": { "href": "#who", "text": "Who" } } },
+            { "li": { "a": { "href": "#where", "text": "Where" } } },
+            { "li": { "a": { "href": "#why", "text": "Why" } } },
+            { "li": { "a": { "href": "#contact", "text": "Contact" } } },
+            { "li": { "a": { "href": "careers.html", "text": "Careers" } } }
+          ]
+        }
+      },
+      "main": {
+        "sections": [
+          {
+            "id": "hero",
+            "class": "hero",
+            "div": [
+              { "class": "hero-section", "img": { "src": "", "alt": "Hero img", "class": "hero-gif" } },
+              { "class": "hero-text", "h1": "MEDVEDSKA LLC<br>Operations Consulting" }
+            ]
+          },
+          {
+            "id": "what",
+            "class": "services section",
+            "div": {
+              "class": "content",
               "div": {
-                "class": "content",
-                "div": {
-                  "class": "card",
-                  "div": { "class": "where", "h2": "What is Medvedska LLC" },
-                  "p": [
-                    "Medvedska LLC was founded to provide essential operational support and consulting services to small businesses and the Department of Defense.",
-                    "No matter how complex circumstances appear, we keep solutions simple ensuring a high adoption rate and success rate.",
-                    "Our company motto is:",
-                    { "em": "Aut Viam Inveniam Aut Faciam." },
-                    "I will either find a way, or make one."
-                  ]
-                }
+                "class": "card",
+                "div": { "class": "where", "h2": "What is Medvedska LLC" },
+                "p": [
+                  "Medvedska LLC was founded to provide essential operational support and consulting services to small businesses and the Department of Defense.",
+                  "No matter how complex circumstances appear, we keep solutions simple ensuring a high adoption rate and success rate.",
+                  "Our company motto is:",
+                  { "em": "Aut Viam Inveniam Aut Faciam." },
+                  "I will either find a way, or make one."
+                ]
               }
-            },
-            {
-              "id": "services",
-              "class": "services",
-              "div": [
-                { "class": "services-content", "div": { "class": "services-image slide-elementR" } },
-                {
-                  "class": "card-avail",
-                  "h2": "Services Available"
-                },
-                {
-                  "class": "services-list",
+            }
+          },
+          {
+            "id": "services",
+            "class": "services",
+            "div": [
+              { "class": "services-content", "div": { "class": "services-image slide-elementR" } },
+              {
+                "class": "card-avail",
+                "h2": "Services Available"
+              },
+              {
+                "class": "services-list",
+                "div": [
+                  { "class": "service-item", "div": { "class": "card-list", "p": "Process, Program, and Project Management" } },
+                  { "class": "service-item", "div": { "class": "card-list", "p": "Data Analytics" } },
+                  { "class": "service-item", "div": { "class": "card-list", "p": "Change Management and SOP Creation" } },
+                  { "class": "service-item", "div": { "class": "card-list", "p": "Quality Assurance" } },
+                  { "class": "service-item", "div": { "class": "card-list", "p": "UX Design" } },
+                  { "class": "service-item", "div": { "class": "card-list", "p": "AI integration" } }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "who",
+            "class": "about section",
+            "div": {
+              "class": "content",
+              "div": {
+                "class": "card",
+                "div": {
+                  "class": "about-content",
                   "div": [
-                    { "class": "service-item", "div": { "class": "card-list", "p": "Process, Program, and Project Management" } },
-                    { "class": "service-item", "div": { "class": "card-list", "p": "Data Analytics" } },
-                    { "class": "service-item", "div": { "class": "card-list", "p": "Change Management and SOP Creation" } },
-                    { "class": "service-item", "div": { "class": "card-list", "p": "Quality Assurance" } },
-                    { "class": "service-item", "div": { "class": "card-list", "p": "UX Design" } },
-                    { "class": "service-item", "div": { "class": "card-list", "p": "AI integration" } }
+                    { "class": "about-image-wrapper", "img": { "src": "natasha.jpeg", "alt": "Natasha Sanders", "class": "about-image " } },
+                    {
+                      "class": "about-text",
+                      "div": { "class": "who", "h2": "Who We Are" },
+                      "p": [
+                        "Anastasia Liashenko is a former Program Manager at Waymo (Google).",
+                        "She is skilled in SQL, Microsoft and Google Suite, various coding languages, along with various tools like PipeDream, Notion, LucidChart, Salesforce, Figma, and Framer.",
+                        "With a BA and AA in Philosophy (Analytical, Critical, and Creative thinking) and an AA in Psychology, she is a results-oriented problem solver."
+                      ]
+                    }
                   ]
-                }
-              ]
-            },
-            {
-              "id": "who",
-              "class": "about section",
-              "div": {
-                "class": "content",
-                "div": {
-                  "class": "card",
-                  "div": {
-                    "class": "about-content",
-                    "div": [
-                      { "class": "about-image-wrapper", "img": { "src": "natasha.jpeg", "alt": "Natasha Sanders", "class": "about-image " } },
-                      {
-                        "class": "about-text",
-                        "div": { "class": "who", "h2": "Who We Are" },
-                        "p": [
-                          "Anastasia Liashenko is a former Program Manager at Waymo (Google).",
-                          "She is skilled in SQL, Microsoft and Google Suite, various coding languages, along with various tools like PipeDream, Notion, LucidChart, Salesforce, Figma, and Framer.",
-                          "With a BA and AA in Philosophy (Analytical, Critical, and Creative thinking) and an AA in Psychology, she is a results-oriented problem solver."
-                        ]
-                      }
-                    ]
-                  }
-                }
-              }
-            },
-            {
-              "id": "where",
-              "class": "local-image",
-              "div": {
-                "class": "content",
-                "div": {
-                  "class": "card",
-                  "div": { "class": "where", "h2": "Where We Are" },
-                  "div": {
-                    "class": "location-content",
-                    "div": { "class": "location-text", "p": "Medvedska LLC is based out of Virginia. <br>Our consultants are willing to travel as well as work remote. Medvedska LLC is eligible for a variety of clearances.", "b": { "ul": [{ "li": "UEI: GXF2V1T3KUQ9" }, { "li": "Primary NAICS: 541614" }, { "li": "CAGE CODE: 9VNZ1" }] } },
-                    "div": { "class": "location-image-wrapper", "img": { "src": "richmond.webp", "alt": "Virginia", "class": "location-image" } }
-                  }
-                }
-              }
-            },
-            {
-              "id": "why",
-              "class": "philosophy section",
-              "div": {
-                "class": "content",
-                "div": {
-                  "class": "card",
-                  "h2": "Why We Do What We Do",
-                  "p": [
-                    "Taking pride in suffering through labor is healthy when suffering is unavoidable and necessary.",
-                    "Pride in suffering while avoidable, is not healthy.",
-                    "Things can be better for you, for your employees, for your customers.",
-                    "Suffering is no longer required, but merely a bad habit. Life has the potential to be easy. Let us help."
-                  ],
-                  "div": { "img": { "src": "logo.svg", "alt": "Medvedska LLC Logo", "class": "hero-logo" } }
-                }
-              }
-            },
-            {
-              "id": "contact",
-              "class": "form",
-              "div": {
-                "class": "content",
-                "iframe": {
-                  "src": "https://forms.gle/LZSDzAGhFCrL3FD46",
-                  "width": "100%",
-                  "height": "1000",
-                  "frameborder": "0",
-                  "marginheight": "0",
-                  "marginwidth": "0",
-                  "style": "z-index: 1; position: relative;",
-                  "text": "Loading..."
                 }
               }
             }
-          ]
-        },
-        "footer": { "p": "&copy; 2024 Medvedska LLC" },
-        "scripts": ["medvedska.js"]
-      }
-    },
-    "css": {
-      "*": {
-        "box-sizing": "border-box",
-        "margin": "0",
-        "padding": "0"
+          },
+          {
+            "id": "where",
+            "class": "local-image",
+            "div": {
+              "class": "content",
+              "div": {
+                "class": "card",
+                "div": { "class": "where", "h2": "Where We Are" },
+                "div": {
+                  "class": "location-content",
+                  "div": { "class": "location-text", "p": "Medvedska LLC is based out of Virginia. <br>Our consultants are willing to travel as well as work remote. Medvedska LLC is eligible for a variety of clearances.", "b": { "ul": [{ "li": "UEI: GXF2V1T3KUQ9" }, { "li": "Primary NAICS: 541614" }, { "li": "CAGE CODE: 9VNZ1" }] } },
+                  "div": { "class": "location-image-wrapper", "img": { "src": "richmond.webp", "alt": "Virginia", "class": "location-image" } }
+                }
+              }
+            }
+          },
+          {
+            "id": "why",
+            "class": "philosophy section",
+            "div": {
+              "class": "content",
+              "div": {
+                "class": "card",
+                "h2": "Why We Do What We Do",
+                "p": [
+                  "Taking pride in suffering through labor is healthy when suffering is unavoidable and necessary.",
+                  "Pride in suffering while avoidable, is not healthy.",
+                  "Things can be better for you, for your employees, for your customers.",
+                  "Suffering is no longer required, but merely a bad habit. Life has the potential to be easy. Let us help."
+                ],
+                "div": { "img": { "src": "logo.svg", "alt": "Medvedska LLC Logo", "class": "hero-logo" } }
+              }
+            }
+          },
+          {
+            "id": "contact",
+            "class": "form",
+            "div": {
+              "class": "content",
+              "iframe": {
+                "src": "https://forms.gle/LZSDzAGhFCrL3FD46",
+                "width": "100%",
+                "height": "1000",
+                "frameborder": "0",
+                "marginheight": "0",
+                "marginwidth": "0",
+                "style": "z-index: 1; position: relative;",
+                "text": "Loading..."
+              }
+            }
+          }
+        ]
       },
-      "body": {
-        "font-family": "'Roboto', sans-serif",
-        "color": "#333333"
-      },
-      "header": {
-        "background-color": "#173459",
-        "color": "rgb(221, 221, 221)",
-        "padding": "0.5em 1em"
-      },
-      "nav": {
-        "position": "fixed",
-        "top": "0",
-        "left": "0",
-        "width": "100%",
-        "background-color": "#173459",
-        "display": "flex",
-        "justify-content": "space-between",
-        "align-items": "center",
-        "padding": "1px 20px",
-        "z-index": "1000"
-      },
-      "nav .logo": {
-        "height": "40px",
-        "margin-right": "10px"
-      },
-      "nav .company-name": {
-        "color": "rgb(221, 221, 221)",
-        "font-size": "1rem"
-      },
-      "nav ul": {
-        "list-style": "none",
-        "display": "flex",
-        "gap": "0.5em",
-        "margin": "0",
-        "padding": "0"
-      },
-      "nav ul li": {
-        "margin": "0"
-      },
-      "nav ul li a": {
-        "color": "rgb(221, 221, 221)",
-        "text-decoration": "none",
-        "transition": "color 0.3s ease"
-      },
-      "nav ul li a:hover": {
-        "color": "#ff5a1f"
-      },
-      "nav ul li a:visited, nav ul li a:focus, nav ul li a:active": {
-        "color": "rgb(221, 221, 221) !important",
-        "text-decoration": "none !important"
-      },
-      ".hero": {
-        "position": "relative",
-        "width": "100%",
-        "height": "200px",
-        "overflow": "hidden",
-        "background-color": "#173459",
-        "text-align": "center",
-        "color": "rgb(221, 221, 221)"
-      },
-      ".hero-image": {
-        "position": "absolute",
-        "top": "0",
-        "left": "0",
-        "width": "100%",
-        "height": "100%",
-        "z-index": "1",
-        "opacity": "100%"
-      },
-      ".hero-gif": {
-        "width": "100%",
-        "height": "100%",
-        "object-fit": "cover",
-        "opacity": "80%"
-      },
-      ".hero-text": {
-        "position": "absolute",
-        "top": "50%",
-        "left": "50%",
-        "transform": "translate(-50%, -50%)",
-        "z-index": "2",
-        "padding": "1em",
-        "border-radius": "10px",
-        "font-family": "'Cinzel', serif",
-        "font-size": "calc(12px + 2vw)",
-        "text-shadow": "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
-      },
-      ".hero-text h1": {
-        "margin": "0"
-      },
-      ".hero-logo": {
-        "margin-top": "1em",
-        "width": "70px",
-        "height": "70px",
-        "background-image": "url('logo.svg')",
-        "background-size": "cover",
-        "position": "relative",
-        "transform": "translate(-50%, -50%)",
-        "animation": "spin 10s linear infinite",
-        "justify-content": "center",
-        "align-items": "center"
-      },
-      "@keyframes spin": {
-        "from": { "transform": "rotate(0deg)" },
-        "to": { "transform": "rotate(360deg)" }
-      },
-      ".section": {
-        "padding": "2em 2em",
-        "border-top": "1px solid #ddd",
-        "text-align": "center",
-        "padding-bottom": "20px"
-      },
-      ".section:nth-child(even)": {
-        "background-color": "#f0f0f0"
-      },
-      ".content": {
-        "max-width": "1000px",
-        "margin": "0 auto",
-        "padding": "0 1em"
-      },
-      "h2": {
-        "font-size": "2em",
-        "margin-bottom": "0.5em",
-        "color": "#173459"
-      },
-      ".services": {
-        "position": "relative",
-        "padding-top": "1em",
-        "padding-bottom": "1em"
-      },
-      ".services-image": {
-        "position": "absolute",
-        "top": "0",
-        "left": "0",
-        "width": "100%",
-        "height": "100%",
-        "background-image": "url('')",
-        "background-size": "cover",
-        "opacity": "100%",
-        "z-index": "-1",
-        "padding-top": "3em",
-        "background-color": "#173459"
-      },
-      ".card": {
-        "background-color": "white",
-        "border-radius": "8px",
-        "box-shadow": "1 1 10px rgba(0, 0, 0, 0.1)",
-        "padding": "1em",
-        "text-align": "center",
-        "padding-top": "1em",
-        "padding-bottom": "1em",
-        "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.2)"
-      },
-      ".card-list": {
-        "background-color": "white",
-        "border-radius": "8px",
-        "box-shadow": "0 0 10px rgba(0, 0, 0, 0.1)",
-        "padding": "1em",
-        "text-align": "center",
-        "padding-top": "1em",
-        "padding-bottom": "1em",
-        "justify-content": "center",
-        "align-items": "center",
-        "align-content": "center",
-        "transition": "transform 0.3s ease-in-out"
-      },
-      ".service-item:hover .card-list": {
-        "transform": "scale(1.2)"
-      },
-      ".card-avail": {
-        "background-color": "white",
-        "border-radius": "8px",
-        "box-shadow": "0 0 10px rgba(0, 0, 0, 0.1)",
-        "padding": ".5em",
-        "text-align": "center",
-        "width": "fit-content",
-        "height": "auto",
-        "margin": "auto",
-        "margin-bottom": "1em",
-        "position": "relative"
-      },
-      ".card p": {
-        "text-align": "justify",
-        "margin-bottom": "0.5em"
-      },
-      ".services-list": {
-        "display": "grid",
-        "grid-template-columns": "repeat(auto-fit, minmax(200px, 1fr))",
-        "gap": "1em",
-        "justify-items": "center",
-        "align-content": "center",
-        "padding-right": "1em",
-        "padding-left": "1em"
-      },
-      ".service-item": {
-        "width": "100%",
-        "justify-content": "center",
-        "align-content": "center",
-        "align-items": "center",
-        "flex": "1 1 200px",
-        "transition": "transform 0.3s ease-in-out"
-      },
-      ".loc-image": {
-        "position": "absolute",
-        "top": "0",
-        "left": "0",
-        "width": "100%",
-        "height": "100%"
-      },
-      ".local-image": {
-        "position": "relative",
-        "top": "0",
-        "left": "0",
-        "width": "100%",
-        "height": "100%",
-        "background-image": "url('')",
-        "background-size": "cover",
-        "opacity": "100%",
-        "z-index": "-1",
-        "padding-top": "1em",
-        "padding-bottom": "1em",
-        "opacity": "100%",
-        "background-color": "#173459"
-      },
-      ".where": {
-        "display": "flex",
-        "align-content": "left"
-      },
-      ".who": {
-        "display": "flex"
-      },
-      ".about-content, .location-content, .philosophy-content": {
-        "display": "flex",
-        "flex-wrap": "wrap",
-        "justify-content": "center",
-        "gap": "1em",
-        "text-align": "center"
-      },
-      ".about-text, .location-text ul, .philosophy-text": {
-        "flex": "1 1 40%",
-        "max-width": "500px",
-        "list-style": "none",
-        "text-decoration": "none"
-      },
-      ".about-text ul": {
-        "text-decoration": "none",
-        "list-style": "none"
-      },
-      ".about-image-wrapper, .location-image-wrapper": {
-        "width": "100%",
-        "max-width": "250px",
-        "margin": "0 auto"
-      },
-      ".about-image, .location-image": {
-        "width": "100%",
-        "height": "auto",
-        "display": "block",
-        "border-radius": "8px",
-        "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.5)"
-      },
-      ".careerwrap": {
-        "display": "flex",
-        "flex-wrap": "wrap",
-        "justify-content": "center",
-        "align-items": "center",
-        "gap": "1em"
-      },
-      ".form": {
-        "background-color": "rgb(218, 215, 215)",
-        "padding-top": "20px"
-      },
-      ".formz": {
-        "background-color": "#173459",
-        "padding-top": "20px",
-        "padding-bottom": "20px"
-      },
-      ".servicez": {
-        "position": "absolute",
-        "top": "0",
-        "left": "0",
-        "width": "100%",
-        "height": "100%",
-        "background-image": "url('')",
-        "background-size": "cover",
-        "opacity": "100%",
-        "z-index": "-1",
-        "padding-top": "3em",
-        "background-color": "white"
-      },
-      "section#contact .content iframe": {
-        "position": "absolute",
-        "z-index": "1",
-        "pointer-events": "auto"
-      },
-      ".foot": {
-        "height": "10px"
-      },
-      ".career-text": {
-        "position": "absolute",
-        "top": "50%",
-        "left": "50%",
-        "transform": "translate(-50%, -50%)",
-        "z-index": "2",
-        "padding": "1em",
-        "border-radius": "10px",
-        "font-family": "'Cinzel', serif",
-        "font-size": "calc(10px + 1vw)",
-        "text-shadow": "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
-        "list-style": "none",
-        "text-decoration": "none"
-      },
-      ".form-logo": {
-        "position": "relative",
-        "width": "90%",
-        "height": "90%",
-        "z-index": "1",
-        "background-size": "cover",
-        "transform": "translate(-50%, -50%)",
-        "animation": "spin 60s linear infinite",
-        "justify-self": "center",
-        "align-self": "center",
-        "justify-items": "center"
-      },
-      ".apply-button": {
-        "background-color": "#007bff",
-        "color": "white",
-        "font-size": "18px",
-        "padding": "10px 20px",
-        "border": "none",
-        "border-radius": "5px",
-        "cursor": "pointer",
-        "transition": "background-color 0.3s ease",
-        "box-shadow": "1 1 10px rgba(0, 0, 0, 0.1)"
-      },
-      ".apply-button:hover": {
-        "background-color": "#0056b3"
-      },
-      "@keyframes slideInFromLeft": {
-        "0%": {
-          "transform": "translateX(-100%)",
-          "opacity": "0"
-        },
-        "100%": {
-          "transform": "translateX(0)",
-          "opacity": "1"
-        }
-      },
-      ".slide-in": {
-        "animation": "slideInFromLeft 1s ease-out forwards"
-      },
-      ".slide-element": {
-        "opacity": "0"
-      },
-      "@keyframes slideInFromRight": {
-        "0%": {
-          "transform": "translateX(+100%)",
-          "opacity": "0"
-        },
-        "100%": {
-          "transform": "translateX(0)",
-          "opacity": "1"
-        }
-      },
-      ".slide-inR": {
-        "animation": "slideInFromRight 1s ease-out forwards"
-      },
-      ".slide-elementR": {
-        "animation": "slideInFromRight 1s ease-out forwards",
-        "opacity": "0"
-      }
-    },
-    "animate": {
-      "slideInFromLeft": {
-        "0%": {
-          "transform": "translateX(-100%)",
-          "opacity": "0"
-        },
-        "100%": {
-          "transform": "translateX(0)",
-          "opacity": "1"
-        }
-      },
-      "slideInFromRight": {
-        "0%": {
-          "transform": "translateX(+100%)",
-          "opacity": "0"
-        },
-        "100%": {
-          "transform": "translateX(0)",
-          "opacity": "1"
-        }
-      },
-      "spin": {
-        "from": {
-          "transform": "rotate(0deg)"
-        },
-        "to": {
-          "transform": "rotate(360deg)"
-        }
+      "footer": { "p": "&copy; 2024 Medvedska LLC" },
+      "div": {
+        "id": "cookie-banner",
+        "class": "cookie-banner",
+        "style": "display: none;",
+        "div": [
+          { "class": "cookie-message", "text": "We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our cookie policy." },
+          {
+            "class": "cookie-buttons",
+            "button": [
+              { "class": "accept-cookies", "text": "Accept", "onclick": "acceptCookies()" },
+              { "class": "decline-cookies", "text": "Decline", "onclick": "declineCookies()" }
+            ]
+          }
+        ]
       }
     }
+  },
+  "css": {
+    "body": { "font-family": "'Roboto', sans-serif", "margin": "0", "padding": "0", "box-sizing": "border-box" },
+    "header": { "position": "fixed", "width": "100%", "top": "0", "z-index": "100" },
+    "nav": { "display": "flex", "justify-content": "space-between", "align-items": "center", "padding": "1em", "background-color": "white", "box-shadow": "0 2px 4px rgba(0, 0, 0, 0.1)", "z-index": "10" },
+    "nav .logo": { "height": "30px", "transition": "transform 0.3s ease-in-out" },
+    "nav ul": { "list-style-type": "none", "display": "flex", "gap": "1em" },
+    "nav a": { "color": "#333", "text-decoration": "none", "transition": "color 0.3s" },
+    "nav a:hover": { "color": "#007BFF" },
+    "section": { "padding": "4em 1em", "max-width": "1200px", "margin": "0 auto" },
+    ".hero": { "background": "url('hero-background.jpg') center/cover no-repeat", "color": "#ffffff", "height": "100vh", "display": "flex", "flex-direction": "column", "justify-content": "center", "align-items": "center", "text-align": "center", "padding": "0 1em" },
+    ".hero h1": { "font-size": "3em", "margin-bottom": "0.5em", "text-shadow": "2px 2px 4px rgba(0, 0, 0, 0.7)" },
+    ".content": { "background-color": "#f4f4f4", "border-radius": "8px", "box-shadow": "0 2px 4px rgba(0, 0, 0, 0.1)", "padding": "2em", "text-align": "center" },
+    ".card": { "background-color": "#ffffff", "border-radius": "8px", "box-shadow": "0 2px 4px rgba(0, 0, 0, 0.1)", "padding": "2em", "text-align": "center", "margin": "1em 0" },
+    "footer": { "background-color": "#173459", "color": "#ffffff", "padding": "1em 0", "text-align": "center" },
+    ".slide-elementR": { "position": "relative", "animation": "slide-in-right 1.5s ease-in-out" },
+    "@keyframes slide-in-right": { "0%": { "opacity": "0", "transform": "translateX(100%)" }, "100%": { "opacity": "1", "transform": "translateX(0)" } },
+    "@media (max-width: 768px)": { "nav ul": { "flex-direction": "column", "gap": "0.5em" }, ".hero h1": { "font-size": "2.5em" } },
+    ".cookie-banner": { "position": "fixed", "bottom": "0", "width": "100%", "background-color": "#000", "color": "#fff", "padding": "1em", "display": "flex", "justify-content": "space-between", "align-items": "center", "z-index": "1000" },
+    ".cookie-message": { "flex": "1" },
+    ".cookie-buttons": { "display": "flex", "gap": "1em" },
+    ".cookie-buttons button": { "background-color": "#007BFF", "color": "#fff", "border": "none", "padding": "0.5em 1em", "border-radius": "4px", "cursor": "pointer" }
+  },
+  "scripts": {
+    "cookie-banner.js": "(function() { function getCookie(name) { let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)')); if (match) return match[2]; } function setCookie(name, value, days) { let expires = ''; if (days) { let date = new Date(); date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); expires = '; expires=' + date.toUTCString(); } document.cookie = name + '=' + (value || '') + expires + '; path=/'; } function acceptCookies() { setCookie('cookies_accepted', 'true', 365); document.getElementById('cookie-banner').style.display = 'none'; } function declineCookies() { setCookie('cookies_accepted', 'false', 365); document.getElementById('cookie-banner').style.display = 'none'; } document.addEventListener('DOMContentLoaded', function() { if (!getCookie('cookies_accepted')) { document.getElementById('cookie-banner').style.display = 'flex'; } }); window.acceptCookies = acceptCookies; window.declineCookies = declineCookies; })();"
   }
+}

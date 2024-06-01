@@ -70,3 +70,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Other existing JavaScript code here...
 });
+(function() {
+    function getCookie(name) {
+        let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        if (match) return match[2];
+    }
+
+    function setCookie(name, value, days) {
+        let expires = '';
+        if (days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = '; expires=' + date.toUTCString();
+        }
+        document.cookie = name + '=' + (value || '') + expires + '; path=/';
+    }
+
+    function acceptCookies() {
+        setCookie('cookies_accepted', 'true', 365);
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    function declineCookies() {
+        setCookie('cookies_accepted', 'false', 365);
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (!getCookie('cookies_accepted')) {
+            document.getElementById('cookie-banner').style.display = 'flex';
+        }
+    });
+
+    window.acceptCookies = acceptCookies;
+    window.declineCookies = declineCookies;
+})();
