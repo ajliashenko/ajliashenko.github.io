@@ -61,3 +61,12 @@ document.getElementById('applyButton').addEventListener('click', function() {
 
     window.location.href = mailtoLink;
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Force reflow
+    document.body.style.overflow = 'hidden';
+    document.body.offsetHeight; // trigger reflow
+    document.body.style.overflow = '';
+
+    // Other existing JavaScript code here...
+});
