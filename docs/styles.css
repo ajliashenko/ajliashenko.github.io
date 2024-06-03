@@ -13,9 +13,11 @@ body {
 
 /* Header */
 header {
+   display: flex;
+   grid-template-columns: 2;
     background-color: #173459; /* Primary dark blue color */
     color: rgb(221, 221, 221);
-    padding: 0.5em 1em;
+    justify-content: space-between;
 }
 
 /* Navigation */
