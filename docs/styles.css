@@ -13,12 +13,9 @@ body {
 
 /* Header */
 header {
-   display: flex;
-   grid-template-columns: 2;
     background-color: #173459; /* Primary dark blue color */
     color: rgb(221, 221, 221);
-    justify-content: space-between;
-    width: auto;
+    padding: 0.5em 1em;
 }
 
 /* Navigation */
@@ -29,6 +26,7 @@ nav {
     width: 100%;
     background-color: #173459;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 1px 20px;
     z-index: 1000;
