@@ -16,6 +16,7 @@ header {
     background-color: #173459; /* Primary dark blue color */
     color: rgb(221, 221, 221);
     padding: 0.5em 1em;
+
 }
 
 /* Navigation */
@@ -25,7 +26,7 @@ nav {
     left: 0;
     width: 100%;
     background-color: #173459;
-    display: flex;
+    
     justify-content: space-between;
     align-items: center;
     padding: 1px 20px;
@@ -35,6 +36,7 @@ nav {
 nav .logo {
     height: 40px;
     margin-right: 10px;
+    position: fixed;
 }
 
 nav .company-name {
@@ -43,6 +45,7 @@ nav .company-name {
 }
 
 nav ul {
+    position: fixed;
     list-style: none;
     display: flex;
     gap: 0.5em;
