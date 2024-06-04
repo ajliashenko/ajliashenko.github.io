@@ -30,7 +30,7 @@ nav {
     height: 40px;
     background-color: #173459;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start
     padding: 1px 20px;
     z-index: 1000;
 }
