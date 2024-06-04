@@ -33,7 +33,6 @@ nav {
     justify-content: space-around;
     padding: 1px 20px;
     z-index: 1000;
-    align-items: center;
 }
 
 .logo img {
@@ -41,7 +40,7 @@ nav {
 }
 
 .logo {
-    height: 40px;
+    height: 200px;
     padding-right: 10px;
 }
 
@@ -123,6 +122,8 @@ nav ul li a:active {
     margin: 0;
 }
 
+
+
 .hero-logo {
     margin-top: 1em;
     width: 70px; /* Adjust width and height as needed */
@@ -191,6 +192,20 @@ h2 {
     z-index: -1; /* Place the image behind other content */
     padding-top: 3em;
     background-color: #173459;
+}
+
+.card-noactive{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Card styles */
