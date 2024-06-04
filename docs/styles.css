@@ -32,7 +32,7 @@ nav {
     display: flex;
     padding: 1px 20px;
     z-index: 1000;
-    padding-left: 40px;
+    padding-left: 1em;
 }
 
 .logo img {
