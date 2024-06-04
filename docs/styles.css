@@ -15,7 +15,9 @@ body {
 header {
     background-color: #173459; /* Primary dark blue color */
     color: rgb(221, 221, 221);
-    padding: 0.5em 1em;
+    padding: 1em 1em; /* Increase padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+    height: 60px;
 
 }
 
@@ -25,36 +27,38 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+    height: 40px;
     background-color: #173459;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
     padding: 1px 20px;
     z-index: 1000;
+    align-items: center;
 }
 
-nav .logo {
+.logo img {
     height: 40px;
-    margin-right: 10px;
-    position: fixed;
 }
 
-nav .company-name {
-    color: rgb(221, 221, 221);
-    font-size: 1rem;
+.logo {
+    height: 40px;
+    padding-right: 10px;
 }
 
 nav ul {
-    position: fixed;
     list-style: none;
     display: flex;
-    gap: 0.5em;
+    gap: 1em;
     margin: 0;
     padding: 0;
+    align-items: center; /* Ensure items are centered vertically */
+    ;
+
 }
 
 nav ul li {
     margin: 0;
+
 }
 
 nav ul li a {
@@ -186,7 +190,7 @@ h2 {
     opacity: 100%;
     z-index: -1; /* Place the image behind other content */
     padding-top: 3em;
-    background-color: #173459
+    background-color: #173459;
 }
 
 /* Card styles */
@@ -213,7 +217,6 @@ h2 {
     align-items: center;
     align-content: center;
     transition: transform 0.3s ease-in-out;
-
 }
 
 .service-item:hover .card-list {
@@ -280,9 +283,7 @@ h2 {
     padding-top: 1em;
     padding-bottom: 1em;
     opacity: 100%;
-
-    background-color: #173459
-
+    background-color: #173459;
 }
 
 .where {
@@ -304,8 +305,6 @@ h2 {
     text-align: center;
 }
 
-
-
 .about-text,
 .location-text ul,
 .philosophy-text {
@@ -315,7 +314,7 @@ h2 {
     text-decoration: none;
 }
 
-.about-text ul{
+.about-text ul {
     text-decoration: none;
     list-style: none;
 }
@@ -326,8 +325,6 @@ h2 {
     width: 100%;
     max-width: 250px;
     margin: 0 auto;
-
-
 }
 
 .about-image,
@@ -339,13 +336,12 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.careerwrap{
+.careerwrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1em;
-
 }
 
 /* Contact Form */
@@ -354,13 +350,13 @@ h2 {
     padding-top: 20px;
 }
 
-.formz{
+.formz {
     background-color: #173459;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.servicez{
+.servicez {
     position: absolute;
     top: 0;
     left: 0;
@@ -371,7 +367,7 @@ h2 {
     opacity: 100%;
     z-index: -1; /* Place the image behind other content */
     padding-top: 3em;
-    background-color: white
+    background-color: white;
 }
 
 section#contact .content iframe {
@@ -380,8 +376,8 @@ section#contact .content iframe {
     pointer-events: auto;
 }
 
-.foot{
-    height:10px;
+.foot {
+    height: 10px;
 }
 
 .career-text {
@@ -395,23 +391,21 @@ section#contact .content iframe {
     font-family: 'Cinzel', serif;
     font-size: calc(10px + 1vw); /* Responsive font size */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-list-style: none;
+    list-style: none;
     text-decoration: none;
-
 }
 
-.form-logo{
+.form-logo {
     position: relative;
     width: 90%;
     height: 90%;
     z-index: 1; /* Place the image behind the text */
-    background-size:cover;
+    background-size: cover;
     transform: translate(-50%, -50%);
     animation: spin 60s linear infinite; /* Adjust animation duration as needed */
     justify-self: center;
     align-self: center;
     justify-items: center;
-
 }
 
 /* Add this to your styles.css file */
@@ -429,7 +423,6 @@ list-style: none;
 
 .apply-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
-
 }
 
 /* Add the slide-in class animation */
@@ -475,7 +468,6 @@ list-style: none;
 
 .cookie-banner {
     position: fixed;
-    bottom: 0;
     width: 100%;
     background-color: #000;
     color: #fff;
