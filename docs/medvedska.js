@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById('applyButton').addEventListener('click', function() {
     const subject = "Put Acronym Here";
-    const body = "Put the department acronym you are applying to in the subject line for automatic download and sorting \n\n OP   -   Operations \n SW   -   Software Development \n LE   -   Legal \n FI   -   Finance \n HR   -   Human Resources \n GD   -   Graphic Design \n CS   -   CyberSecurity \n\n\n Thank you. ";
+    const body = "Put the department acronym you are applying to in the subject line for automatic download, file renaming, and sorting \n\n OP   -   Operations \n SW   -   Software Development \n LE   -   Legal \n FI   -   Finance \n HR   -   Human Resources \n GD   -   Graphic Design \n CS   -   CyberSecurity \n\n\n Thank you. ";
     const mailtoLink = `mailto:Apply@medvedska.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.location.href = mailtoLink;
