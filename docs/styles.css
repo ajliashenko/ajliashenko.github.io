@@ -26,13 +26,13 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
     height: 40px;
     background-color: #173459;
     display: flex;
-    justify-content: flex-start
     padding: 1px 20px;
     z-index: 1000;
+    padding-left: 60px;
 }
 
 .logo img {
