@@ -78,6 +78,14 @@ nav ul li a:active {
     text-decoration: none !important; /* Remove underline */
 }
 
+
+.center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+        }
+
 /* Hero Section */
 .hero {
 display: flex;
