@@ -125,7 +125,7 @@ nav ul li a:active {
 
 
 .hero-logo {
-    margin-top: 1em;
+    margin-top:0;
     width: 70px; /* Adjust width and height as needed */
     height: 70px;
     background-image: url('logo.svg'); /* Replace with your logo path */
