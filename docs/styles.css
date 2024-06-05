@@ -79,6 +79,7 @@ nav ul li a:active {
 
 /* Hero Section */
 .hero {
+display: flex;
     position: relative;
     width: 100%;
     height: 200px; /* Set the height of the banner */
@@ -122,6 +123,14 @@ nav ul li a:active {
     margin: 0;
 }
 
+.wammalamma{
+    size: calc(12px+2vw);
+    margin-top:0;
+    transform: translate(-50%, -50%);
+    animation: spin 10s linear infinite; /* Adjust animation duration as needed */
+    justify-content: center;
+    align-items: center;
+}
 
 
 .hero-logo {
