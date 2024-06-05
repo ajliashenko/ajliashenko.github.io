@@ -48,7 +48,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2em;
+    gap: 1em;
     margin: 0;
     padding: 0;
     align-items: center; /* Ensure items are centered vertically */
