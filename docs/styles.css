@@ -273,10 +273,9 @@ h2 {
     gap: 1em;
     justify-items: center;
     align-content: center;
-    padding-right: 1em;
-    padding-left: 1em;
-    margin-right: 4em;
-    margin-left: 4em;
+    padding-right: 4.5em;
+    padding-left: 4.5em;
+
 }
 
 .service-item {
