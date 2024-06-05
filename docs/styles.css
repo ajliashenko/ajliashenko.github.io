@@ -63,7 +63,6 @@ nav ul li a {
 
 nav ul li:hover a {
     color: #ff5a1f; /* Highlight color */
-
 }
 
 nav ul li a:visited,
@@ -72,6 +71,7 @@ nav ul li a:active {
     color: rgb(221, 221, 221) !important; /* Ensure it stays white */
     text-decoration: none !important; /* Remove underline */
 }
+
 
 
 
