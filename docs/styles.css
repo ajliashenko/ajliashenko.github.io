@@ -55,18 +55,13 @@ nav ul {
     padding-bottom: 5px;
 }
 
-nav ul li {
-    margin: 0;
-
-}
-
 nav ul li a {
     color: rgb(221, 221, 221);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li:hover a {
     color: #ff5a1f; /* Highlight color */
 }
 
@@ -76,6 +71,11 @@ nav ul li a:active {
     color: rgb(221, 221, 221) !important; /* Ensure it stays white */
     text-decoration: none !important; /* Remove underline */
 }
+
+nav ul:hover li a {
+    color: #ff5a1f; /* Highlight color */
+}
+
 
 
 .center-container {
@@ -90,7 +90,7 @@ nav ul li a:active {
 display: flex;
     position: relative;
     width: 100%;
-    height: auto; /* Set the height of the banner */
+    height: 150px; /* Set the height of the banner */
     overflow: hidden; /* Ensure any overflow content is hidden */
     background-color: #173459;
     text-align: center;
