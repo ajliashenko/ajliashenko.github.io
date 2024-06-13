@@ -13,21 +13,13 @@ body {
 
 /* Header */
 header {
-    display: flex;
     background-color: #173459; /* Primary dark blue color */
     color: rgb(221, 221, 221);
     padding: 1em 1em; /* Increase padding for better spacing */
     box-sizing: border-box; /* Ensure padding is included in the height */
-    height: 100%;
-    width: 100%;
-    padding-top:1em;
-    overflow: hidden;
-    text-align: center;
-    font-size: 2em;
+    height: 60px;
+
 }
-
-
-
 
 /* Navigation */
 nav {
@@ -92,6 +84,16 @@ nav ul li a:active {
         }
 
 /* Hero Section */
+.hero {
+display: flex;
+    position: relative;
+    width: 100%;
+    height: 150px; /* Set the height of the banner */
+    overflow: hidden; /* Ensure any overflow content is hidden */
+    background-color: #173459;
+    text-align: center;
+    color: rgb(221, 221, 221);
+}
 
 .hero-image {
     position: absolute;
@@ -110,15 +112,16 @@ nav ul li a:active {
     opacity: 80%;
 }
 
-.header-text {
+.hero-text {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
     z-index: 2; /* Place the text above the image */
+    padding: 1em;
     border-radius: 10px; /* Optional: Add rounded corners to the background */
     font-family: 'Cinzel', serif;
-        font-size: calc(1vw + 1em); /* Adjust the formula as needed */
-        text-align: center;
+    font-size: calc(12px + 2vw); /* Responsive font size */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
@@ -179,7 +182,7 @@ nav ul li a:active {
 
 /* Headings */
 h2 {
-    font-size: 2em;
+  
     margin-bottom: 0.5em;
     color: #173459; /* Primary dark blue color */
 }
