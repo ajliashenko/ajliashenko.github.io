@@ -1,4 +1,4 @@
-part two:
+
 body {
   background: #eee;
   -moz-user-select: none;
@@ -54,6 +54,11 @@ body {
   -ms-flex-direction: column;
   position: relative;
   border-radius: 8px;
+
+
+
+
+
 }
 
 #top-zone {
