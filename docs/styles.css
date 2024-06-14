@@ -178,6 +178,7 @@ display: flex;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 1em;
+   
 }
 
 /* Headings */
@@ -380,7 +381,7 @@ h2 {
 
 /* Contact Form */
 .form {
-    background-color: rgb(218, 215, 215);
+    background-color: #173459;
     padding-top: 20px;
 }
 
@@ -408,6 +409,7 @@ section#contact .content iframe {
     position: absolute;
     z-index: 1;
     pointer-events: auto;
+    background-color: #173459;
 }
 
 .foot {

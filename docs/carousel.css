@@ -1,6 +1,6 @@
 
 body {
-  background: #eee;
+  background: #ddd;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -48,7 +48,7 @@ body {
   height: auto;
   max-width: 1000px;
   margin: auto;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   overflow: hidden;
   -ms-flex-direction: column;
@@ -106,6 +106,7 @@ label {
   padding-right: .2em;
   width: 100%;
   border-radius: 8px;
+  color: #333333;
 }
 
 label:hover {
