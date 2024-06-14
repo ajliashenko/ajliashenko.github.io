@@ -178,7 +178,7 @@ display: flex;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 1em;
-   
+
 }
 
 /* Headings */
@@ -380,13 +380,9 @@ h2 {
 }
 
 /* Contact Form */
-.form {
-    background-color: #173459;
-    padding-top: 20px;
-}
+
 
 .formz {
-    background-color: #173459;
     padding-top: 20px;
     padding-bottom: 20px;
 }
