@@ -31,7 +31,7 @@ nav {
     background-color: #173459;
     display: flex;
     z-index: 1000;
-   
+
 
 }
 
@@ -320,9 +320,12 @@ h2 {
 .where {
     display: flex;
     align-content: left;
+    text-align: left;
+    justify-content: flex-start;
 }
 .who {
     display: flex;
+    justify-content: flex-start;
 }
 
 /* About and Location Content */
