@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Flexbox Testimonials</title>
+  <style>
+    body {
+      background: #ddd;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      padding-top: 20px;
+      font-family: 'Roboto', sans-serif;
+      color: #333333; /* Dark text color */
+    }
+
+    .d-block, h2 {
+      color: #33475c;
+      font-weight: 700;
+      font-size: 2.5rem;
+      display: flex;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 20px;
+      justify-content: center;
+      height: fit-content;
+    }
+
+    .question {
+      display: flex;
+      align-content: flex-start;
+      color: #173459;
+      position: relative;
+    }
+
+    /* ============= Begin Testimonial Flexbox ============ */
+    #flex-container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch; /* Ensure all child elements stretch to the full height */
+      width: 100%;
+      min-height: 400px;
+      height: 100vh; /* Full viewport height */
+      max-width: 1000px;
+      margin: auto;
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      overflow: hidden;
+      position: relative;
+      border: 2px solid #ccc; /* Adding a border */
+      border-radius: 8px;
+    }
+
+    #top-zone {
+      display: flex;
+      width: 100%;
+      height: auto;
+      background-color: #f0f0f0; /* Example background color */
+      z-index: 2; /* Ensure top zone is above other content */
+    }
+
+    #left-zone {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Distribute labels evenly */
+      align-items: stretch;
+      height: 100%; /* Ensure left-zone takes full height */
+      overflow-y: auto;
+    }
+
+    #left-zone .list {
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+      flex: 1;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      align-items: stretch;
+    }
+
+    .item {
+      flex: 1;
+    }
+
+    .item input {
+      display: none;
+      padding-top: 1em;
+    }
+
+    label {
+      display: flex;
+      opacity: 0.5;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      box-shadow: 0 4px 2px rgba(0, 0, 0, 0.5);
+      padding-right: .2em;
+      width: 100%;
+      border-radius: 8px;
+      color: #333333;
+      flex: 1;
+      height: 100%;
+    }
+
+    label:hover {
+      opacity: 0.75;
+      cursor: pointer;
+    }
+
+    .content-test {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transform: translateY(100%);
+      height: 50%;
+      width: 100%;
+      transition: 0.5s ease-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      pointer-events: none;
+    }
+
+    .content-test p {
+      max-width: 50%;
+      text-align: center;
+    }
+
+    #right-zone {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+
+    input:checked ~ .content-test {
+      transform: translateY(0%);
+      transition: transform 1s;
+      opacity: 1;
+    }
+
+    @media (min-width: 680px) {
+      #flex-container {
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+      }
+
+      .content-test {
+        width: 65%;
+        height: 100%;
+        pointer-events: auto;
+        transform: translateY(100%);
+      }
+
+      #top-zone {
+        display: flex;
+        position: relative;
+        height: auto;
+        order: 1;
+      }
+
+      #left-zone {
+        display: flex;
+        width: 35%;
+        height: 100%;
+        align-items: stretch;
+      }
+
+      #right-zone {
+        width: 65%;
+        height: auto;
+        position: relative;
+        order: 2;
+      }
+    }
+
+    @media (max-width: 680px) {
+      #flex-container {
+        flex-direction: column; /* Switch to column layout for narrow viewports */
+        align-items: stretch; /* Stretch items to fill the width */
+      }
+
+      #left-zone {
+        flex: 0 0 auto; /* Let it grow and shrink as needed */
+        width: 100%; /* Take up full width */
+        height: 100%;
+        align-items: stretch;
+        order: 1; /* Ensure it appears first in vertical stacking */
+      }
+
+      #right-zone {
+        flex: 0 0 auto; /* Let it grow and shrink as needed */
+        width: 100%; /* Take up full width */
+        order: 2; /* Ensure it appears after #left-zone in vertical stacking */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+      }
+
+      .content_testimonial-1 {
+        padding-top: 1em;
+      }
+
+      .content-test {
+        display: flex;
+        width: 100%; /* Ensure content inside .content-test spans full width */
+        padding-top: 1em;
+      }
+
+      .item > label {
+        font-size: 1.3rem;
+        text-decoration: none;
+      }
+    }
+
+    .content_testimonial-1 h1,
+    .content_testimonial-2 h1,
+    .content_testimonial-3 h1,
+    .content_testimonial-4 h1 {
+      color: #173459;
+      text-align: center;
+    }
+
+    .content-test h1:first-letter {
+      text-transform: uppercase;
+    }
+
+    input:checked ~ label {
+      opacity: 1;
+      animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    input:checked ~ label.label_testimonial-1,
+    input:checked ~ label.label_testimonial-2,
+    input:checked ~ label.label_testimonial-3,
+    input:checked ~ label.label_testimonial-4 {
+      color: #173459;
+      border-right: solid 4px #173459;
+      border-bottom: solid 4px #173459;
+    }
+
+    label.label_testimonial-1:before,
+    label.label_testimonial-2:before,
+    label.label_testimonial-3:before,
+    label.label_testimonial-4:before {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      margin-left: 15px;
+      background-position: center;
+      background-size: 75% 75%;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+    }
+
+    label:first-letter {
+      text-transform: uppercase;
+    }
+
+    .label_testimonial-1:hover,
+    .label_testimonial-2:hover,
+    .label_testimonial-3:hover,
+    .label_testimonial-4:hover {
+      background-image: linear-gradient(to right, #ffffff, #367ad2);
+    }
+
+    p.testimonialState {
+      margin-top: -5px;
+      font-size: 0.8rem;
+      font-style: italic;
+      color: #173459;
+    }
+
+    p.testimonialFrom {
+      margin-top: 5px;
+      font-weight: bold;
+      color: #173459;
+    }
+  </style>
+</head>
+<body>
+  <div id="flex-container" class="testimonials" style="padding-bottom: 2em; padding-right: 1em; margin-top: 3em;">
+    <div class="top-zone" style="text-align: left; width: 100%;">
+      <h2 class="question" style="height: fit-content; text-align: left; width: 100%;"><u>How</u> Can We - FAQ</h2>
+    </div>
+
+    <div style="display: flex; flex: 1;">
+      <div id="left-zone" style="flex: 1; overflow-y: auto; padding-right: 1em;">
+        <ul class="list">
+          <li class="item">
+            <input type="radio" id="radio_testimonial-1" name="basic_carousel" checked/>
+            <label class="label_testimonial-1" for="radio_testimonial-1">
+              <span style="margin-left: 5px;">Title 1</span>
+            </label>
+            <div class="content_testimonial-1 content-test">
+              <h1>Title 1</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                elementum arcu. Praesent nec turpis eros. Nunc nec tortor
+                feugiat, ullamcorper erat vel, tristique mi.
+              </p>
+              <p class="testimonialState">State 1</p>
+              <p class="testimonialFrom">From 1</p>
+            </div>
+          </li>
+          <li class="item">
+            <input type="radio" id="radio_testimonial-2" name="basic_carousel" />
+            <label class="label_testimonial-2" for="radio_testimonial-2">
+              <span style="margin-left: 5px;">Title 2</span>
+            </label>
+            <div class="content_testimonial-2 content-test">
+              <h1>Title 2</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                elementum arcu. Praesent nec turpis eros. Nunc nec tortor
+                feugiat, ullamcorper erat vel, tristique mi.
+              </p>
+              <p class="testimonialState">State 2</p>
+              <p class="testimonialFrom">From 2</p>
+            </div>
+          </li>
+          <li class="item">
+            <input type="radio" id="radio_testimonial-3" name="basic_carousel" />
+            <label class="label_testimonial-3" for="radio_testimonial-3">
+              <span style="margin-left: 5px;">Title 3</span>
+            </label>
+            <div class="content_testimonial-3 content-test">
+              <h1>Title 3</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                elementum arcu. Praesent nec turpis eros. Nunc nec tortor
+                feugiat, ullamcorper erat vel, tristique mi.
+              </p>
+              <p class="testimonialState">State 3</p>
+              <p class="testimonialFrom">From 3</p>
+            </div>
+          </li>
+          <li class="item">
+            <input type="radio" id="radio_testimonial-4" name="basic_carousel" />
+            <label class="label_testimonial-4" for="radio_testimonial-4">
+              <span style="margin-left: 5px;">Title 4</span>
+            </label>
+            <div class="content_testimonial-4 content-test">
+              <h1>Title 4</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+                elementum arcu. Praesent nec turpis eros. Nunc nec tortor
+                feugiat, ullamcorper erat vel, tristique mi.
+              </p>
+              <p class="testimonialState">State 4</p>
+              <p class="testimonialFrom">From 4</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="right-zone">
+        <div class="content_testimonial-1 content-test">
+          <h1>Title 1</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+            elementum arcu. Praesent nec turpis eros. Nunc nec tortor
+            feugiat, ullamcorper erat vel, tristique mi.
+          </p>
+          <p class="testimonialState">State 1</p>
+          <p class="testimonialFrom">From 1</p>
+        </div>
+        <div class="content_testimonial-2 content-test">
+          <h1>Title 2</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+            elementum arcu. Praesent nec turpis eros. Nunc nec tortor
+            feugiat, ullamcorper erat vel, tristique mi.
+          </p>
+          <p class="testimonialState">State 2</p>
+          <p class="testimonialFrom">From 2</p>
+        </div>
+        <div class="content_testimonial-3 content-test">
+          <h1>Title 3</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+            elementum arcu. Praesent nec turpis eros. Nunc nec tortor
+            feugiat, ullamcorper erat vel, tristique mi.
+          </p>
+          <p class="testimonialState">State 3</p>
+          <p class="testimonialFrom">From 3</p>
+        </div>
+        <div class="content_testimonial-4 content-test">
+          <h1>Title 4</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+            elementum arcu. Praesent nec turpis eros. Nunc nec tortor
+            feugiat, ullamcorper erat vel, tristique mi.
+          </p>
+          <p class="testimonialState">State 4</p>
+          <p class="testimonialFrom">From 4</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
