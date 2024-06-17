@@ -25,24 +25,22 @@ body {
 
 .question{
   display: flex;
+  align-content: flex-start;
   color: #173459;
-  height: 100%;
+
   position: relative;
- margin-top: 0%;
+
 
 }
 
 /* https://codepen.io/pistell/pen/BqGpvR*/
 
 /* ============= Begin Testimonial Flexbox ============ */
-
-
-
 #flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start; /* Change to flex-start to ensure content starts from the top */
+  align-items: stretch; /* Ensure all child elements stretch to the full height */
   width: 100%;
   min-height: 400px;
   height: auto;
@@ -55,14 +53,10 @@ body {
   position: relative;
   border: 2px solid #ccc; /* Adding a border */
   border-radius: 8px;
-
-
-
-
-
 }
 
 #top-zone {
+  display: flex;
   width: 100%;
   height: auto;
   background-color: #f0f0f0; /* Example background color */
@@ -72,17 +66,17 @@ body {
 #left-zone {
   flex: 0 0 35%;
   display: flex;
-  height: auto;
-  width: auto;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute labels evenly */
+  height: 100%;
 }
 
 #left-zone .list {
   display: flex;
   list-style: none;
-  align-content: stretch;
   flex-direction: column;
-  flex: 1 1 auto;
-  margin: auto;
+  flex: 1;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   height: 100%;
@@ -91,7 +85,6 @@ body {
 
 .item input {
   display: none;
-
   padding-top: 1em;
 }
 
@@ -102,7 +95,6 @@ label {
   text-align: center;
   line-height: 50px;
   position: relative;
-  height: auto;
   box-shadow: 0 4px 2px rgba(0, 0, 0, 0.5);
   padding-right: .2em;
   width: 100%;
@@ -113,7 +105,6 @@ label {
 label:hover {
   opacity: 0.75;
   cursor: pointer;
-  height: auto;
 }
 
 .content-test {
@@ -138,7 +129,7 @@ label:hover {
 }
 
 #right-zone {
-  flex: 1 0 65%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -155,10 +146,8 @@ input:checked ~ .content-test {
   #flex-container {
     -ms-flex-direction: row;
     height: auto;
-    width:100%
+    width: 100%;
   }
-
-
 
   .content-test {
     width: 65%;
@@ -166,18 +155,17 @@ input:checked ~ .content-test {
     pointer-events: auto;
     transform: translateY(100%);
   }
-#top-zone{
-  display: flex;
-  position: relative;
-  height: auto;
-  order: 1;
 
-}
+  #top-zone {
+    display: flex;
+    position: relative;
+    height: auto;
+    order: 1;
+  }
 
   #left-zone {
     width: 35%;
     height: 100%;
-
   }
 
   #right-zone {
@@ -185,10 +173,8 @@ input:checked ~ .content-test {
     height: auto;
     position: relative;
     order: 2;
-
   }
 }
-
 
 /* If the screen size is 480px or less */
 @media (max-width: 480px) {
@@ -209,21 +195,20 @@ input:checked ~ .content-test {
     order: 2; /* Ensure it appears after #left-zone in vertical stacking */
     display: flex;
     flex-direction: column;
-justify-content: flex-start;
-align-content: flex-start;
-
-.content_testimonial-1{
-  padding-top: 1em;
-}
-  padding-top: 1em;
-
+    justify-content: flex-start;
+    align-content: flex-start;
   }
+
+  .content_testimonial-1 {
+    padding-top: 1em;
+  }
+
+
 
   .content-test {
     display: flex;
     width: 100%; /* Ensure content inside .content-test spans full width */
     padding-top: 1em;
-
   }
 
   .item > label {
@@ -231,9 +216,6 @@ align-content: flex-start;
     text-decoration: none;
   }
 }
-
-
-
 
 .content_testimonial-1 h1,
 .content_testimonial-2 h1,
@@ -286,7 +268,6 @@ label:first-letter {
 .label_testimonial-3:hover,
 .label_testimonial-4:hover {
   background-image: linear-gradient(to right, #ffffff, #367ad2);
-
 }
 
 p.testimonialState {
