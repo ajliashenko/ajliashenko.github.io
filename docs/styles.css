@@ -122,12 +122,9 @@ display: flex;
     border-radius: 10px; /* Optional: Add rounded corners to the background */
     font-family: 'Cinzel', serif;
     font-size: calc(12px + 2vw); /* Responsive font size */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 }
 
-.hero-text h1 {
-    margin: 0;
-}
 
 .wammalamma{
     size: calc(12px+2vw);
@@ -164,9 +161,9 @@ display: flex;
 /* Section */
 .section {
     padding: 2em 2em;
-    border-top: 1px solid #ddd;
     text-align: center;
     padding-bottom: 20px;
+    border-top: 0px;
 }
 
 .section:nth-child(even) {
@@ -178,12 +175,12 @@ display: flex;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 1em;
+    z-index: 1;
 
 }
 
 /* Headings */
 h2 {
-
     margin-bottom: 0.5em;
     color: #173459; /* Primary dark blue color */
 }
@@ -234,6 +231,9 @@ h2 {
     padding-top: 1em;
     padding-bottom: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ccc; /* Adding a border */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a drop shadow */
+
 }
 
 .card-list {
@@ -291,6 +291,9 @@ h2 {
     align-items: center;
     flex: 1 1 200px;
     transition: transform 0.3s ease-in-out;
+    border: 2px solid #ccc; /* Adding a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a drop shadow */
+
 }
 
 .loc-image {
