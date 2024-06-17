@@ -53,6 +53,7 @@ body {
   overflow: hidden;
   -ms-flex-direction: column;
   position: relative;
+  border: 2px solid #ccc; /* Adding a border */
   border-radius: 8px;
 
 
