@@ -193,6 +193,8 @@ h2 {
     padding-top: 1em;
     padding-bottom: 1em;
     justify-content: center;
+    width: auto;
+    height: auto;
 }
 
 /* Style the background image */
@@ -274,19 +276,29 @@ h2 {
 }
 
 /* Services List */
-.services-list {
+.services-list{
+
+    grid-auto-flow: column;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1em;
     justify-items: center;
     align-content: center;
     padding-left: 0px;
     padding-right: 0px;
 
-
 }
 
-.service-item {
+
+
+
+
+@media (min-width:950px){
+    .grid-container{
+        grid-auto-flow: column;
+    }
+
+.service-item:nth-child(3n+1) {
+    grid-column: 1;
     width: 100%;
     justify-content: center;
     align-content: center;
@@ -297,6 +309,9 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a drop shadow */
 
 }
+    }
+
+
 
 .loc-image {
     position: absolute;
@@ -388,19 +403,7 @@ h2 {
 /* Contact Form */
 
 
-.servicez {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* Set height to cover full height of the section */
-    background-image: url(''); /* Replace 'your-image-url.jpg' with your image path */
-    background-size: cover;
-    opacity: 100%;
-    z-index: -1; /* Place the image behind other content */
-    padding-top: 3em;
-    background-color: white;
-}
+
 
 section#contact .content iframe {
     position: absolute;
