@@ -53,6 +53,7 @@ body {
   position: relative;
   border: 2px solid #ccc; /* Adding a border */
   border-radius: 8px;
+
 }
 
 #top-zone {
@@ -64,11 +65,13 @@ body {
 }
 
 #left-zone {
-  flex: 0 0 35%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Distribute labels evenly */
+  align-items: stretch;
   height: 100%;
+
 }
 
 #left-zone .list {
@@ -81,18 +84,24 @@ body {
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+  align-items: stretch;
+
+
 }
 
 .item input {
   display: none;
   padding-top: 1em;
+
+
 }
 
 label {
-  display: block;
+  display: flex;
   opacity: 0.5;
   height: 50px;
   text-align: center;
+  justify-content: center;
   line-height: 50px;
   position: relative;
   box-shadow: 0 4px 2px rgba(0, 0, 0, 0.5);
@@ -100,6 +109,8 @@ label {
   width: 100%;
   border-radius: 8px;
   color: #333333;
+  height: 100%;
+  flex: 1;
 }
 
 label:hover {
@@ -142,7 +153,7 @@ input:checked ~ .content-test {
   opacity: 1;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 680px) {
   #flex-container {
     -ms-flex-direction: row;
     height: auto;
@@ -164,8 +175,12 @@ input:checked ~ .content-test {
   }
 
   #left-zone {
+    display: flex;
     width: 35%;
     height: 100%;
+    align-items: stretch;
+
+
   }
 
   #right-zone {
@@ -177,7 +192,7 @@ input:checked ~ .content-test {
 }
 
 /* If the screen size is 480px or less */
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   #flex-container {
     flex-direction: column; /* Switch to column layout for narrow viewports */
     align-items: stretch; /* Stretch items to fill the width */
@@ -186,6 +201,8 @@ input:checked ~ .content-test {
   #left-zone {
     flex: 0 0 auto; /* Let it grow and shrink as needed */
     width: 100%; /* Take up full width */
+    height: 100%;
+    align-items: stretch;
     order: 1; /* Ensure it appears first in vertical stacking */
   }
 

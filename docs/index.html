@@ -95,11 +95,11 @@ $(function(){
             <div class="services-content" style="padding-top: 3em;">
 
 
-                <div class="services-image slide-elementR"></div>
-                <div class="card-avail">
+                <div class="services-image"></div>
+                <div class="card-avail" >
                     <h2><u>What</u>&nbsp;We Do</h2>
                 </div>
-                <div class="services-list">
+                <div class="services-list" style="padding-left: 10px; padding-right: 10px;" >
                     <div class="service-item " style="border-width: 0px;">
                         <div class="card-list">
                             <p>Process, Program, and Project Management</p>
@@ -154,7 +154,8 @@ $(function(){
                             </div>
                             <p>Anastasia Liashenko, a former Google employee, was a Program Manager on the Waymo autonomous vehicle project. </p>
                             <p>She is skilled in SQL, Microsoft and Google Suite + GoogleCloud, various coding languages, along with various tools like PipeDream, Notion, LucidChart, Salesforce, Figma, Framer, among others.</p>
-                            <p>With a BA and AA in Philosophy (Analytical, Critical, and Creative thinking) and an AA in Psychology, she is a results-oriented problem solver that understands human behavior.</p>
+                            <p>With a BA and AA in Philosophy from Cal-Poly Humboldt University (Analytical, Critical, and Creative thinking) and an AA in Psychology, she is a results-oriented problem solver that understands human behavior.</p>
+                            <p>When not working, you will likely find her in a garden.</p>
                         </div>
                     </div>
                 </div>
@@ -187,7 +188,7 @@ $(function(){
         <section id="why" class="philosophy section" style="background-color: #173459;border-top: 0px;">
             <div class="content">
                 <div class="card">
-                    <h2 style="text-align: left;"><u>Why</u>&nbsp;We Do What We Do</h2>
+                    <h2><u>Why</u>&nbsp;We Do What We Do</h2>
                     <p>Taking pride in suffering through labor is healthy when suffering is unavoidable and necessary.</p>
                     <p>Pride in unnecessary and avoidable suffering, is not healthy.</p>
                     <p>Things can be better for you, for your employees, for your customers.</p>
@@ -229,12 +230,14 @@ $(function(){
             <div class="formz" >
             <button id="contactButton" class="apply-button" style="order: 1; justify-content: center;">Contact us today for a free consultation</button>
             </div>
+
         </section>
+
 
         <script>
             document.getElementById('contactButton').addEventListener('click', function() {
                 const subject = "Free Consultation";
-                const body = "Thank you for considering Medvedska LLC for your operation needs!\n\n Please fill out the following so we can better assist\n\n\n\nCompany Name: \n\n Your Name: \n\n Your Title: \n\n Goals for the company: \n\n Pain Points: \n\n Timeline when you want it resolved:\n\n State/Country:\n\n Any questions for us?\n\n Thank you, we will get back to you as soon as we can. ";
+                const body = "Thank you for considering Medvedska LLC for your operation needs!\n\n Please fill out the following so we can better assist\n\n\n\nCompany Name: \n\n Your Name: \n\n Your Title: \n\n Goals for the company: \n\n Pain Points: \n\n Timeline when you want it resolved:\n\n State/Country:\n\n Any questions for us?\n\n Thank you, we will get back to you as soon as we can.\n - Medvedska LLC ";
                 const mailtoLink = `mailto:Introduction@Medvedska.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
                 window.location.href = mailtoLink;

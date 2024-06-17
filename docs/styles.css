@@ -177,6 +177,7 @@ display: flex;
     padding: 0 1em;
     z-index: 1;
 
+
 }
 
 /* Headings */
@@ -187,9 +188,11 @@ h2 {
 
 /* Add background image to the section */
 .services {
+    display: flex;
     position: relative; /* Necessary for absolute positioning of the image */
     padding-top: 1em;
     padding-bottom: 1em;
+    justify-content: center;
 }
 
 /* Style the background image */
@@ -277,8 +280,9 @@ h2 {
     gap: 1em;
     justify-items: center;
     align-content: center;
-    padding-right: 4.5em;
-    padding-left: 4.5em;
+    padding-left: 0px;
+    padding-right: 0px;
+
 
 }
 
@@ -333,7 +337,8 @@ h2 {
 /* About and Location Content */
 .about-content,
 .location-content,
-.philosophy-content {
+.philosophy-content
+ {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
