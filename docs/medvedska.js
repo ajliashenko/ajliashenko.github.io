@@ -63,6 +63,14 @@ document.getElementById('applyButton').addEventListener('click', function() {
 });
 
 document.getElementById('contactButton').addEventListener('click', function() {
+    const subject = "Put Acronym Here";
+    const body = "Put the department acronym you are applying to in the subject line. \n\n OP   -   Operations \n SW   -   Software Development \n LE   -   Legal \n FI   -   Finance \n HR   -   Human Resources \n GD   -   Graphic Design \n CS   -   CyberSecurity \n\n\n Thank you. ";
+    const mailtoLink = `mailto:Apply@medvedska.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+});
+
+document.getElementById('contactButton').addEventListener('click', function() {
     const subject = "Consultation";
     const body = "Please use this template: \n \n\nYour name:\nCompany name: \nCity:\nShort term/long term goals:\n\n\nCurrent pain points or roadblocks:\n\nTime-line when you will like things completed:\n ";
     const mailtoLink = `mailto:Aj@medvedska.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

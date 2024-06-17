@@ -160,7 +160,7 @@ $(function(){
                 </div>
             </div>
         </section>
-        <section id="where" class="local-image" style="background-image: url(richmond.webp);background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+        <section id="where" class="local-image" style="background-image: url(https://medvedska.com/richmond.webp);background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
             <div class="content">
                 <div class="card" style="  border: 2px solid #ccc; /* Adding a border */
                 border-radius: 8px;">
@@ -196,13 +196,51 @@ $(function(){
                 </div>
             </div>
         </section>
-        <section id="contact" class="form" style="background-color: #d9f2fd">
-            <div class="content" >
-                <!-- Embedding Google Form -->
-                <iframe src="https://forms.gle/LZSDzAGhFCrL3FD46" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0" style="z-index: 1; position: relative;">Loading...</iframe>
+        <section id="contact"style="background-color: #d9f2fd;justify-items: center; height: 150px; width: 100%;" >
+            <style>
+                #contact {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                    background-color: #d9f2fd;
+                }
+
+                .apply-button {
+                    background-color: #007bff; /* Blue color */
+                    color: white;
+                    font-size: 18px; /* Bigger font size */
+                    padding: 10px 20px; /* Larger padding */
+                    border: none;
+                    border-radius: 5px; /* Optional: rounded corners */
+                    cursor: pointer;
+                    transition: background-color 0.3s ease; /* Smooth hover transition */
+                    box-shadow: 1 1 10px rgba(0, 0, 0, 0.1);
+
+                }
+
+                .apply-button:hover {
+                    background-color: #0056b3; /* Darker blue on hover */
+                }
+            </style>
+
+
+        <section id="contact" style="background-image: url(buttercups-6225833_1920.jpg);background-size: cover; background-repeat: no-repeat; background-position:center;background-attachment: fixed;width: 100%; height: 100%;">
+            <div class="formz" >
+            <button id="contactButton" class="apply-button" style="order: 1; justify-content: center;">Contact us today for a free consultation</button>
             </div>
         </section>
 
+        <script>
+            document.getElementById('contactButton').addEventListener('click', function() {
+                const subject = "Free Consultation";
+                const body = "Thank you for considering Medvedska LLC for your operation needs!\n\n Please fill out the following so we can better assist\n\n\n\nCompany Name: \n\n Your Name: \n\n Your Title: \n\n Goals for the company: \n\n Pain Points: \n\n Timeline when you want it resolved:\n\n State/Country:\n\n Any questions for us?\n\n Thank you, we will get back to you as soon as we can. ";
+                const mailtoLink = `mailto:Introduction@Medvedska.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                window.location.href = mailtoLink;
+            });
+        </script>
+            </main>
         <section>
         <footer>
             <p>&copy; 2024 Medvedska LLC</p>
@@ -220,6 +258,7 @@ $(function(){
             </div>
           </div>
 
+
         <script src="cookie-banner.js"></script>
     </main>
         </script>
@@ -235,5 +274,31 @@ $(function(){
             xHttpOP.open('GET','carousel.html');
             xHttpOP.send();
         </script>
+        <script src="https://medvedska.com/medvedska.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('styles.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        applyStyles(data.styles);
+                        applyAnimations(data.animations);
+                    });
+
+                function applyStyles(styles) {
+                    Object.keys(styles).forEach(element => {
+                        const elements = document.querySelectorAll(element);
+                        elements.forEach(el => {
+                            Object.assign(el.style, styles[element]);
+                        });
+                    });
+                }
+
+                function applyAnimations(animations) {
+                    // Apply animations from JSON data
+                    // Example implementation would go here
+                }
+            });
+            </script>
         <script type="text/javascript" src="script.js"></script>
         </html>
