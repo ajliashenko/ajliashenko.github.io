@@ -31,52 +31,36 @@ nav {
     background-color: #173459;
     display: flex;
     z-index: 1000;
-
-
 }
-
 .logo img {
     height: 40px;
 }
-
 .logo {
     height: 200px;
     padding-right: 10px;
 }
-
-
-.nav ul {
-    display: flex;
-    justify-items: auto;
+nav ul {
     list-style: none;
-    display: flex;
     gap: 1em;
     margin: 0;
     padding: 10px;
     align-items: center; /* Ensure items are centered vertically */
     padding-top: 5px;
     padding-bottom: 5px;
-
 }
-
-.nav ul li a {
+nav ul li a {
+    color: rgb(221, 221, 221);
     text-decoration: none;
     transition: color 0.3s ease;
-
 }
-
-.nav ul li a:hover {
-    color: #ff5a1f; /* Highlight color */
-}
-
-.nav ul li a:visited,
-.nav ul li a:focus,
-.nav ul li a:active {
-    color: #ffffff !important; /* Ensure it stays white */
+nav ul li a:hover {
+    color: #ff5a1f; }/* Highlight color */
+nav ul li a:visited,
+nav ul li a:focus,
+nav ul li a:active {
+    color: rgb(221, 221, 221) !important; /* Ensure it stays white */
     text-decoration: none !important; /* Remove underline */
 }
-
-
 
 
 
@@ -402,7 +386,7 @@ section#contact .content iframe {
     position: absolute;
     z-index: 1;
     pointer-events: auto;
-
+    background-color: #173459;
 }
 
 .foot {
