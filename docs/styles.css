@@ -30,31 +30,45 @@ nav {
     height: 35px;
     background-color: #173459;
     display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
     z-index: 1000;
 }
+
 .logo img {
     height: 40px;
 }
+
 .logo {
     height: 200px;
     padding-right: 10px;
 }
+
 nav ul {
     list-style: none;
-    gap: 1em;
+    display: flex;
+    justify-content: space-around; /* Distribute items with space around */
+    width: 100%; /* Make the ul take the full width of the nav */
     margin: 0;
-    padding: 10px;
+    padding: 0;
     align-items: center; /* Ensure items are centered vertically */
-    padding-top: 5px;
-    padding-bottom: 5px;
 }
+
+nav ul li {
+    flex: 1; /* Ensure each li takes equal space */
+    text-align: center; /* Center the text within each li */
+}
+
 nav ul li a {
     color: rgb(221, 221, 221);
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 nav ul li a:hover {
-    color: #ff5a1f; }/* Highlight color */
+    color: #ff5a1f; /* Highlight color */
+}
+
 nav ul li a:visited,
 nav ul li a:focus,
 nav ul li a:active {
