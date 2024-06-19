@@ -47,7 +47,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around; /* Distribute items with space around */
+    justify-content: space-between; /* Distribute items with space between */
     width: 100%; /* Make the ul take the full width of the nav */
     margin: 0;
     padding: 0;
