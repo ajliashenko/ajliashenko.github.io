@@ -47,7 +47,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between; /* Distribute items with space between */
+     /* Distribute items with space between */
     width: 100%; /* Make the ul take the full width of the nav */
     margin: 0;
     padding: 0;
@@ -522,3 +522,10 @@ section#contact .content iframe {
     border-radius: 4px;
     cursor: pointer;
 }
+
+    p {
+      user-select: text;
+      -webkit-user-select: text; /* For Safari */
+      -moz-user-select: text; /* For Firefox */
+      -ms-user-select: text; /* For Internet Explorer/Edge */
+    }
