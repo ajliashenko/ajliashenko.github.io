@@ -61,7 +61,9 @@ $(function(){
             <li><a href="#who">Who</a></li>
             <li><a href="#where">Where</a></li>
             <li><a href="#why">Why</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="#contact" onclick="sendEmail()">Contact</a>
+              </li>
             <li><a href="https://medvedska.com/careers.html">Careers</a></li>
         </ul>
     </nav>
@@ -102,8 +104,9 @@ $(function(){
 
 <div style="padding-top: 3em;">
         <div class="services-image"></div>
-        <div class="card-avail">
-            <h2><u>What</u>&nbsp;We Do</h2>
+   <!-- <div class="card-avail">-->
+
+        <!-- <h2><u>What</u>&nbsp;We Do</h2>
         </div>
                 <div class="services-list">
                     <div class="service-item " style="border-width: 0px;">
@@ -138,7 +141,7 @@ $(function(){
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
     </section>
 
@@ -160,7 +163,7 @@ $(function(){
                             <div class="who">
                                 <h2><u>Who</u>&nbsp;We Are</h2>
                             </div>
-                            <p>Anastasia Liashenko, a former Google employee, was a Program Manager on the Waymo autonomous vehicle project. </p>
+                            <p>Natasha Sanders, a former Google employee, was a Program Manager on the Waymo autonomous vehicle project. </p>
                             <p>She is skilled in SQL, Microsoft and Google Suite + GoogleCloud, various coding languages, along with various tools like PipeDream, Notion, LucidChart, Salesforce, Figma, Framer, among others.</p>
                             <p>With a BA and AA in Philosophy from Cal-Poly Humboldt University (Analytical, Critical, and Creative thinking) and an AA in Psychology, she is a results-oriented problem solver that understands human behavior.</p>
                             <p>When not working, you will likely find her in a garden.</p>
@@ -243,14 +246,16 @@ $(function(){
 
 
         <script>
-            document.getElementById('contactButton').addEventListener('click', function() {
-                const subject = "Free Consultation";
-                const body = "Thank you for considering Medvedska LLC for your operation needs!\n\n Please fill out the following so we can better assist\n\n\n\nCompany Name: \n\n Your Name: \n\n Your Title: \n\n Goals for the company: \n\n Pain Points: \n\n Timeline when you want it resolved:\n\n State/Country:\n\n Any questions for us?\n\n Thank you, we will get back to you as soon as we can.\n - Medvedska LLC ";
-                const mailtoLink = `mailto:Introduction@Medvedska.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            function sendEmail() {
+              const subject = "Free Consultation";
+              const body = "Thank you for considering Medvedska LLC for your operation needs!\n\n Please fill out the following so we can better assist\n\n\n\nCompany Name: \n\n Your Name: \n\n Your Title: \n\n Goals for the company: \n\n Pain Points: \n\n Timeline when you want it resolved:\n\n State/Country:\n\n Any questions for us?\n\n Thank you, we will get back to you as soon as we can.\n - Medvedska LLC ";
+              const mailtoLink = `mailto:Introduction@Medvedska.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-                window.location.href = mailtoLink;
-            });
-        </script>
+              window.location.href = mailtoLink;
+            }
+
+            document.getElementById('contactButton').addEventListener('click', sendEmail);
+          </script>
             </main>
         <section>
         <footer>
